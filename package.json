@@ -1,4 +1,6 @@
 {
+  "name": "@retrobrainz/name",
+  "description": "retro game rom name parser",
   "type": "module",
   "exports": {
     ".": {
