@@ -38,6 +38,7 @@ const allRegions = [
   'New Zealand',
   'Mexico',
   'Norway',
+  'Peru',
   'Poland',
   'Portugal',
   'Russia',
