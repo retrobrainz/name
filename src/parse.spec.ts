@@ -81,4 +81,13 @@ test('parseName()', () => {
     languages: [],
     tags: ['Virtual Console', 'Switch Online'],
   });
+
+  expect(parse('Dong Dongnao II - Guozhong Yingwen (Yi) (Taiwan)')).toEqual({
+    title: 'Dong Dongnao II - Guozhong Yingwen (Yi)',
+    name: 'Dong Dongnao II - Guozhong Yingwen (Yi) (Taiwan)',
+    disc: null,
+    regions: ['Taiwan'],
+    languages: [],
+    tags: [],
+  });
 });

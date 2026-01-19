@@ -89,8 +89,13 @@ export default function parse(romName: string): ParsedResult {
   }
 
   const regions = regionMatch?.[1].split(', ').map(remapRegion)?.filter(Boolean) || [];
-  const languages = romName.match(langRegex)?.[1];
-  const discMatch = romName.match(discRegex);
+
+  const romExtra = romName.substring(
+    regionMatch?.index ? regionMatch.index + regionMatch[0].length : 0,
+  );
+
+  const languages = romExtra.match(langRegex)?.[1];
+  const discMatch = romExtra.match(discRegex);
   const disc = discMatch ? parseInt(discMatch[1], 10) : null;
 
   const title = romName.substring(0, regionMatch?.index).trim();
@@ -112,7 +117,7 @@ export default function parse(romName: string): ParsedResult {
     .replace(/\s+/g, ' ')
     .trim();
 
-  const tags = Array.from(name.matchAll(tagRegex))
+  const tags = Array.from(name.substring(regionMatch?.index || 0).matchAll(tagRegex))
     .map((match) => match[1])
     .join(', ')
     .split(', ')
