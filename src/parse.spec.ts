@@ -6,7 +6,7 @@ test('parseName()', () => {
     name: 'Greatest Striker (Japan)',
     disc: null,
     regions: ['Japan'],
-    languages: undefined,
+    languages: [],
     tags: [],
   });
 
@@ -15,7 +15,7 @@ test('parseName()', () => {
     name: 'Resident Evil 4 (Europe) (En,Fr,De,Es,It)',
     disc: null,
     regions: ['Europe'],
-    languages: 'En,Fr,De,Es,It',
+    languages: ['En', 'Fr', 'De', 'Es', 'It'],
     tags: [],
   });
 
@@ -24,7 +24,7 @@ test('parseName()', () => {
     name: 'Space Channel 5 - Special Edition (USA)',
     disc: 2,
     regions: ['USA'],
-    languages: undefined,
+    languages: [],
     tags: [],
   });
 
@@ -33,7 +33,7 @@ test('parseName()', () => {
     name: 'Tomb Raider - The Last Revelation (USA)',
     disc: null,
     regions: ['USA'],
-    languages: undefined,
+    languages: [],
     tags: [],
   });
 
@@ -42,7 +42,7 @@ test('parseName()', () => {
     name: 'Tekken 3 (Europe)',
     disc: null,
     regions: ['Europe'],
-    languages: undefined,
+    languages: [],
     tags: [],
   });
 
@@ -51,7 +51,7 @@ test('parseName()', () => {
     name: 'Legend of Dragoon, The (Europe)',
     disc: 1,
     regions: ['Europe'],
-    languages: undefined,
+    languages: [],
     tags: [],
   });
 
@@ -60,7 +60,7 @@ test('parseName()', () => {
     name: '688 Attack Sub (USA, Europe)',
     disc: null,
     regions: ['USA', 'Europe'],
-    languages: undefined,
+    languages: [],
     tags: [],
   });
 
@@ -69,7 +69,7 @@ test('parseName()', () => {
     name: 'Contra - Hard Corps (USA) (Contra Anniversary Collection)',
     disc: null,
     regions: ['USA'],
-    languages: undefined,
+    languages: [],
     tags: ['Contra Anniversary Collection'],
   });
 
@@ -78,7 +78,7 @@ test('parseName()', () => {
     name: 'Atlantis no Nazo (Japan) (Virtual Console, Switch Online)',
     disc: null,
     regions: ['Japan'],
-    languages: undefined,
+    languages: [],
     tags: ['Virtual Console', 'Switch Online'],
   });
 });

@@ -8,7 +8,7 @@ const betaRegex = /\(Beta\s*\d*\)/;
 const demoRegex = /\(Demo\s*\d*\)/;
 const dateRegex = /\([0-9]{4}-[0-9]{2}-[0-9]{2}\)/;
 
-const langRegex = /\(([A-Z][a-z](?:[,+][A-Z][a-z])*)\)/;
+const langRegex = /\(([A-Z][a-z](?:,[A-Z][a-z])*)\)/;
 
 const allRegions = [
   'Argentina',
@@ -74,7 +74,7 @@ export interface ParsedResult {
   name: string;
   disc: number | null;
   regions: string[];
-  languages?: string;
+  languages?: string[];
   tags?: string[];
 }
 
@@ -123,7 +123,7 @@ export default function parse(romName: string): ParsedResult {
     title,
     name,
     regions,
-    languages,
+    languages: languages?.split(',') || [],
     disc,
     tags,
   };
