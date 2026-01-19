@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.1 - 2026-01-19
+
+- Fixed wrong extraction of `languages`
+
 ## 1.2.0 - 2026-01-19
 
 - Changed `languages` from string to string array
