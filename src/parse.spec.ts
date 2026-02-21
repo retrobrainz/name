@@ -67,7 +67,7 @@ test('parseName()', () => {
   expect(parse('Policenauts (Japan) (Disc A)')).toEqual({
     title: 'Policenauts',
     name: 'Policenauts (Japan)',
-    disc: 'A',
+    disc: 1,
     regions: ['Japan'],
     languages: [],
     tags: [],
@@ -76,7 +76,7 @@ test('parseName()', () => {
   expect(parse('Policenauts (Japan) (Disc B)')).toEqual({
     title: 'Policenauts',
     name: 'Policenauts (Japan)',
-    disc: 'B',
+    disc: 2,
     regions: ['Japan'],
     languages: [],
     tags: [],
@@ -85,7 +85,7 @@ test('parseName()', () => {
   expect(parse('Policenauts (Japan) (Disc C)')).toEqual({
     title: 'Policenauts',
     name: 'Policenauts (Japan)',
-    disc: 'C',
+    disc: 3,
     regions: ['Japan'],
     languages: [],
     tags: [],

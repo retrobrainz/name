@@ -72,7 +72,7 @@ export interface ParsedResult {
   title: string;
   /** Game name without disc number, version, beta, demo and serial tags */
   name: string;
-  disc: number | string | null;
+  disc: number | null;
   regions: string[];
   languages?: string[];
   tags?: string[];
@@ -97,9 +97,11 @@ export default function parse(romName: string): ParsedResult {
   const languages = romExtra.match(langRegex)?.[1];
   const discMatch = romExtra.match(discRegex);
   const discValue = discMatch?.[1] ?? null;
-  let disc: number | string | null = null;
+  let disc: number | null = null;
   if (discValue !== null) {
-    disc = /^[0-9]/.test(discValue) ? parseInt(discValue, 10) : discValue;
+    disc = /^[0-9]/.test(discValue)
+      ? parseInt(discValue, 10)
+      : discValue.toUpperCase().charCodeAt(0) - 64;
   }
 
   const title = romName.substring(0, regionMatch?.index).trim();
