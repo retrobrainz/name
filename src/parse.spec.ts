@@ -55,6 +55,15 @@ test('parseName()', () => {
     tags: [],
   });
 
+  expect(parse('Final Fantasy VII (USA) (Disc 1 of 2)')).toEqual({
+    title: 'Final Fantasy VII',
+    name: 'Final Fantasy VII (USA)',
+    disc: 1,
+    regions: ['USA'],
+    languages: [],
+    tags: [],
+  });
+
   expect(parse('688 Attack Sub (USA, Europe)')).toEqual({
     title: '688 Attack Sub',
     name: '688 Attack Sub (USA, Europe)',
