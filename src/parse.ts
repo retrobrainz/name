@@ -1,4 +1,4 @@
-const discRegex = /\(Dis[ck] ([0-9]+)(?: of [0-9]+)?\)/;
+const discRegex = /\(Dis[ck] ([0-9]+|[A-Z])(?: of [0-9]+)?\)/;
 
 const revRegex = /\(Rev \w+\)/;
 const altRegex = /\(Alt\s*\d*\)/;
@@ -96,7 +96,13 @@ export default function parse(romName: string): ParsedResult {
 
   const languages = romExtra.match(langRegex)?.[1];
   const discMatch = romExtra.match(discRegex);
-  const disc = discMatch ? parseInt(discMatch[1], 10) : null;
+  const discValue = discMatch?.[1] ?? null;
+  let disc: number | null = null;
+  if (discValue !== null) {
+    disc = /^[0-9]/.test(discValue)
+      ? parseInt(discValue, 10)
+      : discValue.toUpperCase().charCodeAt(0) - 64;
+  }
 
   const title = romName.substring(0, regionMatch?.index).trim();
 
