@@ -64,6 +64,33 @@ test('parseName()', () => {
     tags: [],
   });
 
+  expect(parse('Policenauts (Japan) (Disc A)')).toEqual({
+    title: 'Policenauts',
+    name: 'Policenauts (Japan)',
+    disc: 'A',
+    regions: ['Japan'],
+    languages: [],
+    tags: [],
+  });
+
+  expect(parse('Policenauts (Japan) (Disc B)')).toEqual({
+    title: 'Policenauts',
+    name: 'Policenauts (Japan)',
+    disc: 'B',
+    regions: ['Japan'],
+    languages: [],
+    tags: [],
+  });
+
+  expect(parse('Policenauts (Japan) (Disc C)')).toEqual({
+    title: 'Policenauts',
+    name: 'Policenauts (Japan)',
+    disc: 'C',
+    regions: ['Japan'],
+    languages: [],
+    tags: [],
+  });
+
   expect(parse('688 Attack Sub (USA, Europe)')).toEqual({
     title: '688 Attack Sub',
     name: '688 Attack Sub (USA, Europe)',
