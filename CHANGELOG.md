@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.0 - 2026-02-28
+
+- Added support for `(Disc 1 of 2)` and `(Disc A)` format
+
 ## 1.2.1 - 2026-01-19
 
 - Fixed wrong extraction of `languages`
