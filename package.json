@@ -1,5 +1,6 @@
 {
   "name": "@retrobrainz/name",
+  "version": "1.3.0",
   "description": "retro game rom name parser",
   "type": "module",
   "exports": {
@@ -67,6 +68,5 @@
     "doc": {
       "basename": "/name/"
     }
-  },
-  "version": "1.3.0"
+  }
 }
